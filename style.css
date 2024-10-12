@@ -265,6 +265,7 @@ button {
     aspect-ratio: 2/1;
     width: 100%;
     object-fit: cover;
+    filter: grayscale(100%) contrast(120%) brightness(95%);
 }
 
 .service-box-content {
