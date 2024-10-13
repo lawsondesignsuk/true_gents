@@ -1,0 +1,635 @@
+* {
+    padding: 0;
+    margin: 0;
+    max-width: 100%;
+}
+
+body {
+    background-color: black;
+    color: white;
+    font-family: "Futura LT W01 Medium";
+    text-align: ;
+}
+
+
+p {
+    font-size: medium;
+}
+
+h3 {
+    font-size: 1.4em;
+    color: #D0B662;
+    font-family: "Didot eText W01 Italic";
+}
+
+h4 {
+    font-family: "Didot eText W01 Italic";
+}
+
+
+/* Base header styles */
+header {
+    max-width: 100%;
+    position: sticky;
+    background-color: black;
+    padding: 20px;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Didot eText W01 Italic";
+}
+
+
+header img {
+    width: 50px;
+    border-radius: 50%;
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+/* Desktop menu styles */
+.desktop-menu {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.desktop-menu button {
+    align-items: center;
+    display: flex;
+    top: -10px;
+    position: absolute;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.desktop-container {
+    display: flex;
+    gap: 50px;
+    margin: auto;
+}
+
+.desktop-menu li a {
+    color: white;
+    text-decoration: none;
+}
+
+.desktop-menu li a:hover {
+    color: #D0B662;
+    text-decoration: none;
+}
+
+.mobile-menu {
+    display: none; /* Hidden initially */
+    flex-direction: column;
+    background-color: black;
+    position: absolute;
+    top: 80px; /* Adjust based on your header height */
+    height: 90vh;
+    right: 0px;
+    width: 75%;
+    padding: 10px;
+    border-radius: 8px;
+    padding-top: 50px;
+}
+
+.mobile-menu li {
+    margin: 10px 0;
+    padding-left: 30px;
+    margin-right: 70%;
+}
+
+.mobile-menu li a {
+    color: white;
+    text-decoration: none;
+    color: #D0B662;
+}
+
+.menu-button {
+    display: none; /* Hidden on desktop */
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    margin-right: 0px;
+}
+
+@media (max-width: 768px) {
+    .desktop-menu {
+        display: none; /* Hide the desktop menu on mobile */
+    }
+
+    .menu-button {
+        display: block; /* Show hamburger menu on mobile */
+    }
+    header img {
+        width: 50px;
+        border-radius: 50%;
+        width: 15%;
+    }
+
+}
+
+  
+.hero {
+    position: relative; /* Required for pseudo-element positioning */
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(images/hero.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.5; /* Set opacity for the background image */
+    z-index: -1; /* Ensure it stays behind the content */
+}
+
+@media (min-width: 768px) {
+    .hero::before {
+        background-image: url(images/hero2.jpg);
+    }
+
+    .hero-content {
+        text-align: center;
+        margin: auto;
+    }
+
+    .hero {
+        height: 55vh;
+    }
+}
+
+.hero h1 {
+    font-size: 50px;
+    letter-spacing: 15px;
+    font-family: "Futura LT W01 Medium";
+    margin-bottom: 10px;
+}
+
+.hero h1, h2 {
+    text-transform: uppercase;
+    font-family: "Futura LT W01 Medium";
+}
+
+.hero h2 {
+    font-weight: lighter;
+    font-size: 35px;
+    letter-spacing: 5px;
+    color: #D0B662;
+}
+
+.hero p {
+    font-family: "Futura LT W01 Medium";
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centers the content absolutely */
+    text-align: center;
+    z-index: 1;
+}
+
+
+
+
+
+button {
+    margin-top: 40px;
+    padding: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+    color: white;
+    background-color: #D0B662;
+    border: none;
+    text-transform: capitalize;
+    font-size: 15px;
+}
+
+.hero img {
+    width: 100px;
+}
+
+.container {
+    width: 92%;
+    margin: auto;
+}
+
+.content {
+    text-align: center;
+    padding-top: 35px;
+    padding-bottom: 35px;
+}
+
+.content h2, h3 {
+    font-family: "Didot eText W01 Italic";
+    text-transform: none;
+}
+.content h2 {
+    font-size: 50px;
+    margin-bottom: 5px;
+    color: #D0B662;
+}
+
+
+
+.content-2 {
+    text-align: left;
+    padding-top: 35px;
+    padding-bottom: 35px;
+
+}
+
+/* Styling for unordered lists */
+.content-2 ul {
+    list-style-type: none; /* Removes default bullet points */
+    padding: 0; /* Removes default padding */
+    margin: 0; /* Removes default margin */
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 60px;
+}
+
+/* Styling for list items */
+.content-2 ul li {
+    margin: 10px 0; /* Adds spacing between list items */
+    border-radius: 5px; /* Rounds the corners */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+    font-family: 'Futura LT W01 Medium', sans-serif; /* Font styling */
+    font-size: 18px; /* Adjust font size */
+    color: white; /* Dark text color for better readability */
+}
+
+
+/* Optional: Add a custom bullet or icon for each list item */
+.content-2 ul li::before {
+    content: "•"; /* Replace with your preferred icon or symbol */
+    color: #D0B662; /* Orange color for the bullet */
+    font-size: 15px; /* Increase bullet size */
+    display: inline-block;
+    width: 1.5em; /* Space between bullet and text */
+}
+
+
+.content-2 h2, h3 {
+    font-family: "Didot eText W01 Italic";
+    text-transform: none;
+}
+.content-2 h2 {
+    font-size: 50px;
+    margin-bottom: 5px;
+    color: #D0B662;
+}
+
+@media (min-width: 768px) {
+    .content-2 {
+        width: 80%;
+        margin: auto;
+    }
+}
+
+@media (min-width: 1204px) {
+    .content-2 {
+        width: 70%;
+        margin: auto;
+    }
+}
+
+@media (min-width: 1400px) {
+    .content-2 {
+        width: 60%;
+        margin: auto;
+    }
+}
+
+@media (min-width: 1700px) {
+    .content-2 {
+        width: 50%;
+        margin: auto;
+    }
+}
+
+@media (min-width: 1900px) {
+    .content-2 {
+        width: 40%;
+        margin: auto;
+    }
+}
+
+@media (min-width: 2100px) {
+    .content-2 {
+        width: 30%;
+        margin: auto;
+    }
+}
+
+table {
+    border: 1px solid #D0B662; /* Light black border */
+    border-collapse: collapse; /* Ensures borders don't double up */
+    width: auto; /* Adjust the width as needed */
+    margin-top: 35px;
+}
+
+td {
+    border: 1px solid #D0B662; /* Light black border for table cells */
+    padding: 10px 20px; /* Padding for a comfortable look */
+    text-align: center; /* Center the content in the table cells */
+}
+
+
+.service-description h3 {
+    margin-top: 60px;
+    margin-bottom: 20px;
+}
+
+.service-description a {
+    text-decoration: none;
+    color: white;
+}
+
+.service-box-container {
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+}
+
+.service-box {
+    border: solid #D0B662 1px;
+    margin-bottom: 15px;
+}
+
+.service-box img {
+    aspect-ratio: 2/1;
+    width: 100%;
+    object-fit: cover;
+    filter: grayscale(100%) contrast(120%) brightness(95%);
+}
+
+
+
+.service-box-content {
+    padding-top: 35px;
+    padding-bottom: 35px;
+    width: 85%;
+    margin: auto;
+}
+
+.service-box-content h3 {
+    color: #D0B662;
+    margin-bottom: 20px;
+}
+
+.service-box-content p {
+    margin-bottom: 20px;
+}
+
+.service-box-content a {
+    color: #D0B662;
+}
+
+.service-box-divider {
+    border-bottom: 1px solid #D0B662;
+    margin-bottom: 30px;
+    margin-top: 25px;
+}
+
+p.price {
+    font-weight: bolder;
+}
+
+.service-box button {
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.service-box-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); /* One column by default */
+    gap: 30px;
+}
+
+@media (min-width: 768px) {
+    .service-box-container {
+        grid-template-columns: repeat(2, 1fr); /* Two columns on medium screens */
+    }
+}
+
+@media (min-width: 1024px) {
+    .service-box-container {
+        grid-template-columns: repeat(3, 1fr); /* Three columns on large screens */
+    }
+
+    .service-box img {
+            aspect-ratio: 1/1;
+            width: 100%;
+            object-fit: cover;
+        }
+
+    .service-box button {
+        width: 25%;
+    }
+}
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 30px;
+    margin: auto;
+    margin-top: 40px;
+}
+
+.gallery-img img {
+    object-fit: cover;
+    aspect-ratio: 1/1;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .gallery-container {
+        display: block;
+        margin-top: 50px;
+    }
+    .gallery-container img {
+        margin-bottom: 15px;
+    }
+
+}
+@media (max-width: 1024px) {
+    .gallery-container {
+        grid-template-columns: repeat(2, 1fr); /* Three columns on large screens */
+    }
+}
+
+.service-box-container img:hover {
+    opacity: 0.5;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+.contact-container {
+    color: white;
+    font-size: 2em;
+    display: grid;
+    gap: 20px; /* Space between boxes */
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.contact-container a {
+    text-decoration: none;
+}
+
+.contact-container h4 {
+    color: white;
+}
+
+i {
+    color: white;
+}
+
+.contact-box {
+    display: grid;
+    gap: 80px; /* Space inside each box */
+    background-color: #D0B662;
+}
+
+.contact-box:hover {
+    opacity: 0.8;
+}
+
+.contact-box-content {
+    text-align: center;
+    padding: 50px; /* Space inside each content area */
+}
+
+.contact-box-content h4 {
+    margin-bottom: 10px; /* Space below the heading */
+}
+
+.contact-box-content p {
+    color: black; /* Text color for paragraphs */
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+    .contact-container {
+        grid-template-columns: 1fr; /* One box per row on smaller screens */
+    }
+}
+
+/* Two boxes per row below 1024px */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .contact-container {
+        grid-template-columns: repeat(2, 1fr); /* Two columns on medium screens */
+    }
+
+    /* Make the last box span the width of two boxes */
+    .contact-box:nth-child(3) {
+        grid-column: 1 / -1; /* Make the third box span all columns */
+    }
+}
+
+/* Full row layout for screens above 1024px */
+@media (min-width: 1024px) {
+    .contact-container {
+        grid-template-columns: repeat(3, 1fr); /* Three columns on larger screens */
+    }
+}
+
+
+
+footer {
+    display: grid;
+    text-align: center;
+    background-color: #D0B662;
+    width: 100%;
+    padding-top: 50px;
+    color: black;
+    margin-top: 20px;
+    margin-top: 60px;
+}
+
+footer a {
+    text-decoration: none;
+    color: black;
+}
+
+.footer-content h4 {
+    margin-bottom: 5px;
+    font-family: "Didot eText W01 Italic";
+    font-size: larger;
+}
+.footer-content p {
+    margin-bottom: 40px;
+}
+
+.footer-copyright {
+    background-color: #000; /* Adjust to match your design */
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9em;
+}
+
+footer a {
+    color: #78866B; /* Accent color */
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+iframe {
+    max-width: 100%;
+    height: auto;
+}
+
+@media (min-width: 768px) {
+    footer {
+        grid-template-columns: repeat(2, 1fr); /* Two columns on medium screens */
+    }
+    .footer-copyright {
+        display: flex;
+        justify-content: center;
+    }
+    .footer-copyright a {
+        color: #D0B662;
+        text-decoration: none;
+    }
+}
+
+@media (min-width: 1024px) {
+    footer {
+        grid-template-columns: repeat(3, 1fr); /* Three columns on large screens */
+    }
+}  make the font sizes responsive
+
+
